@@ -30,7 +30,7 @@ const shapeObj1 = {
 
 const shapeObj2 = {
   line: new Line(90 + 340, 200, 115, -45),
-  square: new Polygon(90 + 340, 200, 50, 4),
+  square: new Polygon(90 + 340, 200, 150, 4, 45),
   polygon: new Polygon(90 + 340, 200, 85, 3),
   circle: new Circle(90 + 340, 200, 35),
 };
@@ -87,13 +87,13 @@ function animation() {
   } else {
     isCollide = is2PolyCollide(shape1.vertices, shape2.vertices);
   }
-  const colorShape1 = isCollide ? "#a71717" : "#0e9bb4";
-
-  shape1.draw(ctx, colorShape1);
-  shape1.update(mouse.x, mouse.y);
 
   shape2.draw(ctx, "#cecece");
   shape2.update();
+
+  const colorShape1 = isCollide ? "#a71717" : "#0e9bb4";
+  shape1.draw(ctx, colorShape1);
+  shape1.update(mouse.x, mouse.y);
 
   window.requestAnimationFrame(animation);
 }

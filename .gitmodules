@@ -1,0 +1,6 @@
+[submodule "v-utils"]
+	path = v-utils
+	url = git@github.com:darthofcode/v-utils.git
+[submodule "script/utils"]
+	path = script/utils
+	url = git@github.com:darthofcode/jsGameUtils.git
